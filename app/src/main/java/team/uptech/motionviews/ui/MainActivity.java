@@ -286,6 +286,9 @@ public class MainActivity extends AppCompatActivity implements TextEditorDialogF
                 e.printStackTrace();
             }
         }
+        else if(item.getItemId() == R.id.main_delete_sticker) {
+            motionView.deletedSelectedEntity();
+        }
         return super.onOptionsItemSelected(item);
     }
 
