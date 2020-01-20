@@ -198,7 +198,7 @@ public class MotionView  extends FrameLayout {
         // IMPORTANT: always create white background, cos if the image is saved in JPEG format,
         // which doesn't have transparent pixels, the background will be black
 
-        Bitmap bmp = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.imgv);
+        Bitmap bmp = BitmapFactory.decodeResource(getContext().getResources(), Helper.INSTANCE.getBackgroundId());
         Bitmap bitmap = bmp.copy(Bitmap.Config.ARGB_8888, true);
 
         Canvas canvas = new Canvas(bitmap);

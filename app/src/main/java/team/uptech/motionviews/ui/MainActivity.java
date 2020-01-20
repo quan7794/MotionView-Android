@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -97,20 +98,26 @@ public class MainActivity extends AppCompatActivity implements TextEditorDialogF
     private void updateMotionViewSize() {
         float currHeight = motionView.getHeight();
         float currWidth = motionView.getWidth();
-        float newHight;
+
+        float newHeight;
         float newWidth;
 
         // Test 1920x1080 image
-        Helper.INSTANCE.setRatio(1.0F * 1920 / currWidth);
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(),Helper.INSTANCE.getBackgroundId());
+        int originalHeight = bmp.getHeight();
+        int originalWitdthbmp = bmp.getWidth();
+        originalHeight = 375;
+        originalWitdthbmp = 600;
+        Helper.INSTANCE.setRatio(1.0F * originalWitdthbmp / currWidth);
         newWidth = currWidth;
-        newHight = 1.0F * 1080 / Helper.INSTANCE.getRatio();
+        newHeight = 1.0F * originalHeight / Helper.INSTANCE.getRatio();
 
         ViewGroup.LayoutParams params = motionView.getLayoutParams();
-        params.height = (int) newHight;
+        params.height = (int) newHeight;
         params.width = (int) newWidth;
 
         motionView.setLayoutParams(params);
-        motionView.setBackground(getResources().getDrawable(R.drawable.imgv));
+        motionView.setBackground(getResources().getDrawable(Helper.INSTANCE.getBackgroundId()));
         // redraw
         motionView.invalidate();
     }
