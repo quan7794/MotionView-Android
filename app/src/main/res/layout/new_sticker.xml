@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:id="@+id/sticker"
+    >
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/sticker_close"
+        android:src="@drawable/ic_remove"
+        android:layout_gravity="top|start"
+        />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:id="@+id/sticker_img"
+    android:src="@drawable/pidgey"
+    android:padding="@dimen/_20sdp"
+    android:layout_height="wrap_content"/>
+
+</FrameLayout>

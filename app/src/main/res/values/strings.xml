@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Motion Views</string>
-    <string name="add_sticker">Add Sticker</string>
-    <string name="add_text">Add Text</string>
-
-    <string name="select_color">Select color</string>
+    <string name="app_name">PhotoDecoration</string>
+    <string name="photo_saved">Photo saved</string>
+    <string name="permission_denied">Permission denied :"(</string>
+    <string name="permission_req">Permission require</string>
+    <string name="permission_message">Please allow storage permission to load photo!</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="select_font">Select font</string>
 </resources>
